@@ -54,7 +54,7 @@ export const initOnContext = (ctx) => {
 async function getHeaders(ctx) {
   if (typeof window !== 'undefined') return null
   if (typeof ctx.req === 'undefined') return null
-  debugger;
+  // debugger;
   const s = await auth0.getSession(ctx.req, ctx.res)
   if (s && s.accessToken == null) return null
 
